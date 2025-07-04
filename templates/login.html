@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <img src="{{ url_for('static', filename='logo.png') }}" class="logo">
+        Smart Attendance Notifier
+    </div>
+
+    <div class="main-content">
+        <h1>Login</h1>
+        <form method="post">
+            <input type="email" name="email" placeholder="Email"><br><br>
+            <input type="password" name="password" placeholder="Password"><br><br>
+            <input type="submit" value="Login" class="btn">
+        </form>
+    </div>
+</body>
+</html>

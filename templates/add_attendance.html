@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Attendance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <img src="{{ url_for('static', filename='logo.png') }}" class="logo">
+        Smart Attendance Notifier
+    </div>
+
+    <div class="main-content">
+        <h1>Add Attendance</h1>
+        <form method="post">
+            <input type="text" name="subject" placeholder="Subject"><br><br>
+            <select name="status">
+                <option value="Present">Present</option>
+                <option value="Absent">Absent</option>
+            </select><br><br>
+            <input type="submit" value="Add" class="btn">
+        </form>
+    </div>
+</body>
+</html>

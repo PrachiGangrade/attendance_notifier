@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Attendance Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <img src="{{ url_for('static', filename='logo.png') }}" class="logo">
+        Smart Attendance Notifier
+    </div>
+
+    <div class="main-content">
+        <h1>Your Attendance Report</h1>
+        <h3>Attendance Percentage: {{ percent }}%</h3>
+        <table border="1">
+            <tr>
+                <th>Subject</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+            {% for r in records %}
+            <tr>
+                <td>{{ r.subject }}</td>
+                <td>{{ r.date }}</td>
+                <td>{{ r.status }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <a href="/dashboard" class="btn">Back to Dashboard</a>
+    </div>
+</body>
+</html>

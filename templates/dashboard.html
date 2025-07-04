@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <img src="{{ url_for('static', filename='logo.png') }}" class="logo">
+        Smart Attendance Notifier
+    </div>
+
+    <div class="main-content">
+        <h1>Dashboard</h1>
+        <a href="/add_attendance" class="btn">Add Attendance</a>
+        <a href="/report" class="btn">View Report</a>
+        <a href="/logout" class="btn">Logout</a>
+    </div>
+</body>
+</html>
